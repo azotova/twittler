@@ -20,7 +20,7 @@
           while(index >= 0){
             var tweet = streams.home[index];
           
-            var $tweet = $('<div></div>');
+            var $tweet = $('<div class="myTweets"> </div>');
             $tweet.text('@' + tweet.user +" " + jQuery.timeago(tweet.created_at) + ': ' + tweet.message);
             $tweet.appendTo($div);
             index -= 1;
@@ -38,7 +38,6 @@
     <div class="buttonHolder">
       <button class="myButton"> Get new messages </button>
     </div>  
-    <br>
     <br>
     <br>
     <div class="messages">

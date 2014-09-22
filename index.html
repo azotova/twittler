@@ -21,16 +21,38 @@
             var tweet = streams.home[index];
           
             var $tweet = $('<div class="myTweets"> </div>');
-            $tweet.html('@' + '<a id="username" href="https://www.google.ru/">' + tweet.user+'</a>' +" " + jQuery.timeago(tweet.created_at) + ': ' + tweet.message);
+            $tweet.html('@' + '<a class="username" href="javascript:void(0)" >' + tweet.user+'</a>' +" " + jQuery.timeago(tweet.created_at) + ': ' + tweet.message);
             $tweet.appendTo($div);
             index -= 1;
           }
         };
 
+        var getUserMessages = function (givenUser) {
+        var $divUs = $('.messages');
+            $divUs.html('');
+            var index = streams.users[givenUser].length - 1;
+            while(index >= 0){
+              var tweet = streams.users[givenUser][index];
+          
+              var $tweet = $('<div class="myTweets"> </div>');
+              $tweet.html('@' + '<span id="username" >' + tweet.user+'</span>' +" " + jQuery.timeago(tweet.created_at) + ': ' + tweet.message);
+              $tweet.appendTo($divUs);
+              index -= 1;
+          }
+        };
+
+
         getMessages();
         $('button').on('click', function() {
           getMessages();
         });
+
+       $('.username').on('click', function() {
+          var User = $(this).text();
+          getUserMessages(User);
+          
+        });
+
       });
 
     </script>

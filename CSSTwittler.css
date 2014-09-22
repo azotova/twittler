@@ -67,7 +67,7 @@ body {
     color: #404040;
 }
 
-#username{
+.username{
 	font-weight: bold;
 	font-size: 16px;
 }

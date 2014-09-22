@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSSTwittler.css">
     <script src="data_generator.js"></script>
     <script src="jquery.timeago.js"></script>
   </head>
@@ -12,7 +13,7 @@
         
         var getMessages = function () {
         
-          var $div = $('div');
+          var $div = $('.messages');
           $div.html('');
 
           var index = streams.home.length - 1;
@@ -33,9 +34,14 @@
       });
 
     </script>
-    
-    <button> Get new messages </button>
-    <div>
+    <br>
+    <div class="buttonHolder">
+      <button class="myButton"> Get new messages </button>
+    </div>  
+    <br>
+    <br>
+    <br>
+    <div class="messages">
 
     </div>
   </body>

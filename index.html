@@ -11,8 +11,8 @@
         
 
         
-        var $body = $('body');
-        $body.html('');
+        var $div = $('div');
+        $div.html('');
 
         var index = streams.home.length - 1;
         while(index >= 0){
@@ -20,12 +20,17 @@
           
           var $tweet = $('<div></div>');
           $tweet.text('@' + tweet.user + ' at ' +tweet.created_at+ ': ' + tweet.message);
-          $tweet.appendTo($body);
+          $tweet.appendTo($div);
           index -= 1;
         }
 
       });
 
     </script>
+    
+    <button> Get new messages </button>
+    <div>
+
+    </div>
   </body>
 </html>

@@ -35,7 +35,7 @@
               var tweet = streams.users[givenUser][index];
           
               var $tweet = $('<div class="myTweets"> </div>');
-              $tweet.html('@' + '<span id="username" >' + tweet.user+'</span>' +" " + jQuery.timeago(tweet.created_at) + ': ' + tweet.message);
+              $tweet.html('@' + '<span class="username" >' + tweet.user+'</span>' +" " + jQuery.timeago(tweet.created_at) + ': ' + tweet.message);
               $tweet.appendTo($divUs);
               index -= 1;
           }
@@ -43,11 +43,15 @@
 
 
         getMessages();
+      
+
+      
+
         $('button').on('click', function() {
           getMessages();
         });
 
-       $('.username').on('click', function() {
+       $('.messages').on('click', '.username' , function() {
           var User = $(this).text();
           getUserMessages(User);
           

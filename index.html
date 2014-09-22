@@ -9,21 +9,26 @@
 
       $(document).ready(function(){
         
-
+        var getMessages = function () {
         
-        var $div = $('div');
-        $div.html('');
+          var $div = $('div');
+          $div.html('');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
+          var index = streams.home.length - 1;
+          while(index >= 0){
+            var tweet = streams.home[index];
           
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ' at ' +tweet.created_at+ ': ' + tweet.message);
-          $tweet.appendTo($div);
-          index -= 1;
-        }
+            var $tweet = $('<div></div>');
+            $tweet.text('@' + tweet.user + ' at ' +tweet.created_at+ ': ' + tweet.message);
+            $tweet.appendTo($div);
+            index -= 1;
+          }
+        };
 
+        getMessages();
+        $('button').on('click', function() {
+          getMessages();
+        });
       });
 
     </script>

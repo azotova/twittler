@@ -64,6 +64,8 @@
          var text = $("input#tweet").val();
          if (streams.users[visitor]==undefined) {streams.users[visitor]=[]};
          writeTweet(text);
+         $("input#tweet").val(''); //clear the input field after submit
+         getMessages(); // in order to see the new tweet immediately
        });
 
       });

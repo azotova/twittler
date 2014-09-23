@@ -8,6 +8,12 @@ body {
     margin-right: auto;
 }
 
+.inputHolder{
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+}
+
 .myButton {
 	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
 	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
@@ -70,4 +76,31 @@ body {
 .username{
 	font-weight: bold;
 	font-size: 16px;
+}
+
+.send {
+	-moz-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	-webkit-box-shadow: 0px 1px 0px 0px #f0f7fa;
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	
+	background-color:#33bdef;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+
+.draft {
+	height:25px;
+	width: 700px;
+	font-size:14px;
 }

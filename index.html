@@ -8,6 +8,7 @@
   </head>
   <body>
     <script>
+      var visitor="Visitor";
 
       $(document).ready(function(){
         
@@ -47,7 +48,7 @@
 
       
 
-        $('button').on('click', function() {
+        $('button.myButton').on('click', function() {
           getMessages();
         });
 
@@ -57,8 +58,17 @@
           
         });
 
+
+
+       $("button.send").on('click',function(){
+         var text = $("input#tweet").val();
+         if (streams.users[visitor]==undefined) {streams.users[visitor]=[]};
+         writeTweet(text);
+       });
+
       });
 
+      
     </script>
     <br>
     <div class="buttonHolder">

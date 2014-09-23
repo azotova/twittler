@@ -8,7 +8,15 @@
   </head>
   <body>
     <script>
-      var visitor="Visitor";
+      var visitor;
+
+      function askName() {
+        visitor = prompt("Please enter your name");
+      }
+
+      askName();
+
+      if (visitor==null || visitor == "") visitor="anonymous";
 
       $(document).ready(function(){
         
